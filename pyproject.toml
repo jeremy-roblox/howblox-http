@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "bloxlink-http"
+name = "howblox-http"
 version = "0.1.0"
 description = "An http interactions worker for Howblox"
 authors = ["Howblox"]
