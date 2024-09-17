@@ -1,0 +1,5 @@
+GET http://localhost:8010/api/users/986260479351603210/type
+Authorisation: oof
+Content-Type: application/json
+
+###
