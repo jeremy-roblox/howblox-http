@@ -1,4 +1,4 @@
-# howblox INSTALLATION FILE
+# HOWBLOX INSTALLATION FILE
 
 import os
 from subprocess import STDOUT, PIPE, Popen
@@ -108,7 +108,7 @@ def ask_for_save_config():
             for key, value in user_config.items():
                 set_key(f"{os.getcwd()}/.env", key, value)
 
-        console.print("Howblox HTTP is now configured. Please double-check the .env file and update accordingly.", style="bold green")
+        console.print("Bloxlink HTTP is now configured. Please double-check the .env file and update accordingly.", style="bold green")
     else:
         console.print("Config not saved.")
 
@@ -118,7 +118,7 @@ def ask_for_save_config():
         "You can run [purple]ssh -R 80:localhost:8010 serveo.net[/purple] in your terminal to start the reverse proxy. "
         "You can use any forwarding service; localhost.run and ngrok are other alternatives.\n\n"
         "[purple]Copy the URL and append \"/bot/\" to the URL, start the bot web server and paste it in your Discord dashboard under General Information -> Interactions Endpoint Url.[/purple]",
-        "You can run the bot using [purple]docker-compose up howblox-http[/purple]."
+        "You can run the bot using [purple]docker-compose up bloxlink-http[/purple]."
     )
 
 
@@ -131,12 +131,12 @@ def ask_to_run_bot():
 
     if run_bot.lower() in ("y", "yes"):
         console.print("Starting bot...", style="bold green")
-        spawn_process("docker-compose up howblox-http", hide_output=False)
+        spawn_process("docker-compose up bloxlink-http", hide_output=False)
 
 
 step(
-    ("Welcome to the Howblox Installation File.", "bold red"),
-    "This setup will populate a local .env file that you can use with Howblox.",
+    ("Welcome to the Bloxlink Installation File.", "bold red"),
+    "This setup will populate a local .env file that you can use with Bloxlink.",
     "Press [bold cyan]Enter[/bold cyan] to continue.",
     start_with_clear_console=True
 )
