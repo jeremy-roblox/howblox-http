@@ -2,7 +2,7 @@ from typing import Literal, Annotated
 from os import getcwd, environ
 from dotenv import load_dotenv
 from pydantic import Field
-from bloxlink_lib import Config as HOWBLOX_CONFIG
+from howblox_lib import Config as HOWBLOX_CONFIG
 
 load_dotenv(f"{getcwd()}/.env")
 
